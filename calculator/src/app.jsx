@@ -68,7 +68,7 @@ const App = () => {
                 <button onClick={()=> operatorValue('-')}>-</button>
                 <button onClick={()=> operatorValue('*')}>*</button>
                 <button onClick={()=> operatorValue('/')}>/</button>
-                <button onClick={()=> operatorValue('%')}>%</button>
+                <button onClick={()=> operatorValue('%')}>%%%%%%%</button>
                 <button onClick={clearValue}>clear</button>
             </div>
             <div>
