@@ -41,7 +41,10 @@ const App = () => {
       date: new Date().toLocaleDateString(),
     };
     setHistories([historyValue, ...histories]);
+   
   };
+
+  
 
   // clear function
   const clearFunc = () => {
@@ -58,7 +61,7 @@ const App = () => {
       <AllButtons operatorHandler={operatorHandler} clearFunc={clearFunc} />
 
       {/* history section  */}
-      <History histories={histories} />
+      <History histories={histories}/>
     </div>
   );
 };
