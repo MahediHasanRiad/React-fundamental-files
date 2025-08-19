@@ -1,0 +1,11 @@
+.body{
+    width: 50%;
+    margin: auto;
+}
+button{
+    padding: 5px 10px;
+    border-radius: 1px;
+    border: none;
+    margin: 5px;
+}
+
