@@ -13,11 +13,9 @@ function Filter({ formData }){
     }
 
     if(search !== ''){
-        // storeFilter = formData
-        storeFilter = storeFilter.filter(data => data.name === search)
-    }else{
+        // storeFilter = storeFilter.filter(data => data.name === search)
+        storeFilter = storeFilter.filter(data => data.name.includes(search) || data.email.includes(search))
     }
-
 
     
 
