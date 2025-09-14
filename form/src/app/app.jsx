@@ -13,6 +13,7 @@ const initial = {
 function App() {
     const [values, setValues] = useState({...initial})
     const [errors, setErrors] = useState({...initial})
+    const [hasError, setHasError] = useState(false)
     const [focus, setFocus] = useState({
         name: false,
         email: false,
@@ -34,8 +35,10 @@ function App() {
             console.log(values)
             setValues(values)
             setErrors({...initial})
+            setHasError(false)
         }else{
             setErrors({...error})
+            setHasError(true)
             console.log(errors)
         }
         
@@ -75,11 +78,13 @@ function App() {
                 ...errors,
                 [e.target.name]: error[e.target.name] 
             })
+            setHasError(true)
         }else{
             setErrors({
                 ...errors,
                 [e.target.name]: ''
             })
+            setHasError(false)
         }
         // or
         // setErrors({
@@ -121,7 +126,7 @@ function App() {
             onFocus={handleFocus}
             onBlur={handleBlur}
         />
-        <SubmitButton onClick={submitHandler}>SUBMIT</SubmitButton>
+        <SubmitButton disabled={hasError} onClick={submitHandler}>SUBMIT</SubmitButton>
        </form>
       </Container>
   );
